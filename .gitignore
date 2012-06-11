@@ -1,0 +1,8 @@
+.DS_Store
+/env
+/apache.wsgi
+/media
+/static
+/webstats
+*.pyc
+*.sqlite
