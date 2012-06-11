@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Walken</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/default.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Walken</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="dropdown" id="menu1">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">Lists <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">New</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Irgendwas</a></li>
+                  <li><a href="#">Und diese</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Shared Lists</a></li>
+              <li><a href="#">Plugins</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+            <p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Lists</li>
+              <li class="active"><a href="#"><i class="icon-screenshot"></i> All</a></li>
+              <li><a href="#"><i class="icon-th-list"></i> Irgendwas</a></li>
+              <li><a href="#"><i class="icon-th-list"></i> Und diese</a></li>
+            </ul>
+          </div>
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">People</li>
+              <li class="active"><a href="#"><i class="icon-screenshot"></i> All</a></li>
+              <li><a href="#"><i class="icon-user"></i> Sprosso</a></li>
+              <li><a href="#"><i class="icon-user"></i> Bogatyr</a></li>
+              <li><a href="#"><i class="icon-user"></i> Griminal</a></li>
+            </ul>
+          </div>
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Rating</li>
+              <li class="active"><a href="#"><i class="icon-screenshot"></i> All</a></li>
+              <li><a href="#"><i class="icon-star"></i> Me</a></li>
+              <li><a href="#"><i class="icon-star"></i> Bogatyr</a></li>
+              <li><a href="#"><i class="icon-star"></i> Griminal</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <form class="well form-search">
+            <input type="text" class="input-medium search-query" id="query">
+            <button type="button" class="btn btn-info" id="btn-include">include</button>
+            <button type="button" class="btn btn-warning" id="btn-exclude">exclude</button>
+            <div class="pull-right">
+              <input class="btn btn-success" type="button" value="Save" data-toggle="modal" data-target="#create-list">
+              <div class="modal fade" id="create-list">
+                <div class="modal-header">
+                  <a class="close" data-dismiss="modal">×</a>
+                  <h3>Create new list</h3>
+                </div>
+                <div class="modal-body">
+                  <p>One fine body…</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#" class="btn btn-primary">Save changes</a>
+                  <a href="#" class="btn">Close</a>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div id="tags">
+              <span class="label label-info">Action <i class"icon-white">&times;</i></span>
+              <span class="label label-info">2010 <i class"icon-white">&times;</i></span>
+              <span class="label label-warning">Thriller <i class"icon-white">&times;</i></span>
+              <span class="label label-info"><i class="icon-star icon-white"></i><i class="icon-star icon-white"></i> <i class"icon-white">&times;</i></span>
+              <span class="label label-warning"><i class="icon-star icon-white"></i><i class="icon-star icon-white"></i><i class="icon-star icon-white"></i> <i class"icon-white">&times;</i></span>
+              <span class="label label-info">The <i class"icon-white">&times;</i></span>
+            </div>
+          </form>
+          <ul class="breadcrumb">
+            <li><strong>Unsaved list</strong></li>
+            <li class="pull-right">2345 Results</li>
+          </ul>
+          <table class="table table-striped table-bordered">
+            <tr>
+              <th>Title</th>
+              <th>Year</th>
+              <th>Tags</th>
+              <th>Rating</th>
+              <th width="110px"></th>
+            </tr>
+
+
+            <tr class="movie-entry" rel="popover" data-original-title="The Brothers Grimm">
+              <td>
+                The Brothers Grimm
+                <div class="movie-details">
+                  <div class="movie-details-container">
+                    <div class="thumbnail"><img width="100px" src="images/test_cover.jpeg"></div>
+                    <p>Will and Jake Grimm are travelling con-artists who encounter a genuine fairy-tale curse which requires genuine courage instead of their usual bogus exorcisms.</p>
+                  </div>
+                </div>
+              </td>
+              <td>2005</td>
+              <td>Action, Adventure, Comedy</td>
+              <td class="movie-rating" data-original-title="Rating">
+                <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i>
+                <div class="rating-details">
+                  <div class="rating-details-container">
+                    <table width="100%">
+                      <tr>
+                        <td>Me</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>Bogatyr</td>
+                        <td><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></td>
+                      </tr>
+                      <tr>
+                        <td>Griminal</td>
+                        <td><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </td>
+              <th>
+                  <div class="btn-group">
+                    <a class="btn btn-mini" data-toggle="modal" data-target="#movie-details"><i class="icon-pencil"></i></a>
+                    <a class="btn btn-mini" href="#"><i class="icon-folder-open"></i></a>
+                    <a class="btn btn-mini" href="#"><i class="icon-play"></i></a>
+                  </div>
+              </th>
+            </tr>
+            <div class="modal fade" id="movie-details">
+              <div class="modal-header">
+                <a class="close" data-dismiss="modal">×</a>
+                <h3>The Brothers Grimm</h3>
+              </div>
+              <div class="modal-body">
+                <p>One fine body…</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn btn-primary">Save changes</a>
+                <a href="#" class="btn">Close</a>
+              </div>
+            </div>
+
+
+            <tr class="movie-entry" rel="popover" data-content="Agent J travels in time to MIB's early years in the 1960s, to stop an alien from assassinating his friend Agent K and changing history." data-original-title="Men in Black III">
+             <td>Men in Black III</td>
+              <td>2012</td>
+              <td>Action, Comedy, Sci-Fi</td>
+              <td>1.5 <i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></td>
+              <th>
+                  <div class="btn-group">
+                    <a class="btn btn-mini" data-toggle="modal" data-target="#movie-details"><i class="icon-pencil"></i></a>
+                    <a class="btn btn-mini" href="#"><i class="icon-folder-open"></i></a>
+                    <a class="btn btn-mini" href="#"><i class="icon-play"></i></a>
+                  </div>
+              </th>
+            </tr>
+            <tr class="movie-entry" rel="popover" data-content="Will and Jake Grimm are travelling con-artists who encounter a genuine fairy-tale curse which requires genuine courage instead of their usual bogus exorcisms." data-original-title="The Brothers Grimm">
+              <td>The Brothers Grimm</td>
+              <td>2005</td>
+              <td>Action, Adventure, Comedy</td>
+              <td>2.5 <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></td>
+              <th>
+                  <div class="btn-group">
+                    <a class="btn btn-mini" data-toggle="modal" data-target="#movie-details"><i class="icon-pencil"></i></a>
+                    <a class="btn btn-mini" href="#"><i class="icon-folder-open"></i></a>
+                    <a class="btn btn-mini" href="#"><i class="icon-play"></i></a>
+                  </div>
+              </th>
+            </tr>
+          </table>
+          <div class="pagination">
+            <ul>
+              <li><a href="#">Prev</a></li>
+              <li class="active">
+                <a href="#">1</a>
+              </li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <script src="js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap/js/bootstrap-popover.js"></script>
+
+    <script>
+      function add_tag(value, label){
+        if (value) {
+          $('#tags').append('<span class="label label-' + label + '">' + value + ' <i class"icon-white">&times;</i></span> ');
+        }
+      }
+      $(function(){
+        $('#btn-include').click(function(e){
+          add_tag($('#query').val(), 'info');
+        });
+        $('#btn-exclude').click(function(e){
+          add_tag($('#query').val(), 'warning');
+        });
+        $('#tags .label').live('click', function(e){
+          $(this).remove();
+        });
+        $('.movie-entry').popover({'animation':false, 'placement':'left', 'content':function(){
+          return $(this).find('.movie-details').html();
+        }});
+        $('.movie-entry .movie-rating').popover({'animation':false, 'placement':'bottom', 'content':function(){
+          return $(this).find('.rating-details').html();
+        }});
+      });
+    </script>
+
+  </body>
+</html>
