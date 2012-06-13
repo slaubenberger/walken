@@ -1,0 +1,16 @@
+#tags {
+	line-height: 21px;
+}
+.movie-details, .rating-details {
+	display: none;
+}
+.movie-details img {
+	width: 50px;
+}
+.movie-details-container, .rating-details-container {
+	margin-bottom: 10px;
+}
+.movie-details-container .thumbnail {
+	float: left;
+	margin-right: 5px;
+}

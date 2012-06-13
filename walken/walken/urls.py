@@ -1,8 +1,10 @@
+from walken.views import MovieList, FileList, MovieDetail
+
 from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -13,5 +15,9 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', MovieList.as_view()),
+    url(r'^files/', FileList.as_view()),
+    url(r'^movies/(?P<pk>\w+)/', MovieDetail.as_view()),
+
 )
