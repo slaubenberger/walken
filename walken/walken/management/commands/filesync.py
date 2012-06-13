@@ -29,7 +29,7 @@ class Command(BaseCommand):
         tmdb.configure(settings.MOVIE_API_KEY)
 
         counter = 0
-        for dirpath, dirnames, filenames in os.walk('/Volumes/NAS_public/video/movies'):
+        for dirpath, dirnames, filenames in os.walk('/Users/sspross/UseNeXT/wizard'):
             for filename in filenames:
                 try:
                     if filename.endswith(FILE_ENDINGS):
